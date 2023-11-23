@@ -1,0 +1,110 @@
+.cuadrado{
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 40px;
+    border: 4px solid black;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.cuadradito{
+    width: 30px;
+    height: 30px;
+    background: rgba(33,33,33,255);
+    border: 4px solid rgba(0,0,0,255);
+    border-radius: 40px;
+    margin: 11px;
+}
+.box-red{
+width: 100%;
+height: 7vh;
+background: rgba(220,26,26,255);
+}
+.box-black{
+    width: 100%;
+    height: 4vh;
+    background: black;
+}
+/* ******************************** */
+.subtitle__pokedexPage{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 10vw;
+    color: red;
+    font-weight: 600;
+}
+.span__subtitle{
+    color: black;
+}
+.form__pokedexPage{
+    display: flex;
+}
+/* 
+.input__pokedexPage{
+    width: 300px;
+    height:35px ;
+    border-color: rgba(82, 81, 81, 0.314);
+    box-shadow: 2.5px 2.1px 10px rgb(140, 140, 140);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 12px;
+    margin-left: 10vw ;
+}
+.button__pokedexPage{
+    width: 85px;
+    height: 35px;
+    background: rgba(217,63,63,255);
+    color: white;
+    border: none;
+} */
+.input__pokedexPage{
+    margin-left: 10vw ;
+}
+/* .option__allPokemon{
+    position: absolute;
+    top: 140px;
+    margin-left:70vw;
+} */
+.prueba{
+    display: flex;
+}
+.option__allPokemon{
+    width: 20vw;
+    height:35px ;
+    margin-left: 20px;
+}
+.div__box__cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding:5% 5%;
+    gap: 3em;
+   }
+   
+   /* .div__box__cards{
+    display: flex;
+    margin: 10vh 5vw;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+   } */
+
+@media (max-width: 1250px) {
+    .div__box__cards{        
+        grid-template-columns: 1fr 1fr 1fr ;        
+    }
+}
+@media (max-width: 900px) {
+    .div__box__cards{       
+        grid-template-columns: 1fr 1fr ;        
+    }
+}
+@media (max-width: 600px) {
+    .div__box__cards{        
+        grid-template-columns: 1fr ;        
+    }
+}
+

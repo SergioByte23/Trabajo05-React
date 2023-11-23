@@ -6,7 +6,7 @@ import PokedexPage from './pages/PokedexPage'
 import PokeInfoPage from './pages/PokeInfoPage'
 import { useSelector } from 'react-redux'
 import ProtecetedRoutes from './pages/ProtecetedRoutes'
-
+import 'bulma/css/bulma.min.css'
 function App() {
   
   return (

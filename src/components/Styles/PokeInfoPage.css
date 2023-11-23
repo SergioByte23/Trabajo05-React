@@ -1,0 +1,89 @@
+/* .infoPoke__article {
+    width: 100%;    
+    position: relative;
+
+}
+.infoPoke__div__card{
+    width: 80%;
+    background: violet;
+    margin:500px auto;
+    position: relative;
+}
+.infoPoke__img {
+    position: absolute;
+    width: 100%;
+    max-width: 200px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+} */
+
+.infoPoke__article {
+    width: 90%;
+    height: 150vh;
+    /* height: 500px;     */
+    background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+    margin-top: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 100px;
+}
+
+.infoPoke__div__card {
+    width: 100%;
+    background: white;
+
+
+    /* margin:100px auto;
+    position: relative; */
+
+}
+
+.infoPoke__img {
+    position: absolute;
+    width: 100%;
+    max-width: 200px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.infoPoke__id {
+    text-align: center;
+}
+
+.infoPoke__namecanbios {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoPoke__name {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.infoPoke__hr__name {
+    width: 35%;
+    height: 1px;
+    border: 1px solid rebeccapurple;
+    margin: 5px;
+}
+
+.infoPoke__characteristics {
+    width: 20%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.infoPoke__powers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}

@@ -3,7 +3,7 @@ import useFetch from "../hooks/userFetch"
 import { useEffect, useRef, useState } from "react"
 import PokeCard from "../components/PokedexPage/PokeCard"
 import SelectType from "../components/PokedexPage/SelectType"
-
+// import '../components/Styles/PokedexPage.css'
 
 
 const PokedexPage = () => {
@@ -38,15 +38,28 @@ const PokedexPage = () => {
 
   return (
     <div>
-      <p>Welcome <span>{trainerName}</span>, here you can find your favorite pokemon. Let's go!</p>
-      <form onSubmit={handleSubmit} action="">
-        <input ref={inputSearch} type="text" />
-        <button>Search</button>
-      </form>
-      <SelectType
-        setSelectValue={setSelectValue}
-      />
-      <div>
+      <div className="box-banner">
+        <div className="box-red"></div>
+        <div className="cuadrado">
+          <div className="cuadradito"></div>
+        </div>
+        <div className="box-black"></div>
+      </div>
+
+      <p className="subtitle__pokedexPage">Welcome {trainerName}, <span className="span__subtitle">here you can find your favorite pokemon. Let's go!</span></p>
+      <div className="prueba">
+        <form onSubmit={handleSubmit} action="">
+          <input className=" input__pokedex input__pokedexPage" ref={inputSearch} type="text" placeholder="Search Pokemon..." />
+          <button className=" button__pokedex button__pokedexPage">Search</button>
+        </form>
+        <div>
+          <SelectType
+            setSelectValue={setSelectValue}
+
+          />
+        </div>
+      </div>
+      <div className="div__box__cards">
         {
           pokemons?.results.filter(cbFilter).map(poke => (
             <PokeCard
