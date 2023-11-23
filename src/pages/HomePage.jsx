@@ -20,7 +20,7 @@ const HomePage = () => {
     <>
     
     <div className='pokedex'>
-        <img className='title__pokedex' src="/public/banner.png" alt="" />
+        <img className='title__pokedex' src="/banner.png" alt="" />
         <h2 className='subtitle__pokedex'>¡Hi Trainer!</h2>
         <p className='paragraph'>To start,please give me your trainer name</p>
         <form onSubmit={handleSubmit}>
