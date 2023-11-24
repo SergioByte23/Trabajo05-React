@@ -13,9 +13,10 @@ const PokeInfoPage = () => {
   useEffect(() => {
     getPokemons()
   }, [])
+  const firsType=pokemon?.types[0].type.name
   console.log(pokemon);
   return (
-    <div>
+    <div className="infoPoke__boxx">
       <div className="box-banner">
         <div className="box-red"></div>
         <div className="cuadrado">
@@ -24,37 +25,77 @@ const PokeInfoPage = () => {
         <div className="box-black"></div>
       </div>
 
-      <article className="infoPoke__article">
-      <img className="infoPoke__img" src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
+      <article className={`infoPoke__article ${firsType}-gradient`}>
+        <img className="infoPoke__img" src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
 
         <div className="infoPoke__div__card">
-        <h3 className="infoPoke__id">#{pokemon?.id}</h3>
-        <div className="infoPoke__namecanbios">
-          <hr className="infoPoke__hr__name"></hr>
-          <span className="infoPoke__name">{pokemon?.species.name}</span>
-          <hr className="infoPoke__hr__name"></hr>
-        </div>
-        <ul className="infoPoke__characteristics">
-          <li className="infoPoke__weight">Peso</li>
-          <li className="infoPoke__height">Altura</li>
-          <li className="infoPoke__weight__value">{pokemon?.weight}</li>
-          <li className="infoPoke__height__value">{pokemon?.height}</li>
-        </ul>
-        <div className="infoPoke__powers">
-          <h3>Tipo</h3>
-          <h3>Habilidades</h3>
-          <div>
-            <h3>{pokemon?.types[0].type.name}</h3>
+          <h3 className="infoPoke__id">#{pokemon?.id}</h3>
+          <div className="infoPoke__namecanbios">
+            <hr className="infoPoke__hr__name"></hr>
+            <span className="infoPoke__name">{pokemon?.species.name}</span>
+            <hr className="infoPoke__hr__name"></hr>
           </div>
-          <div>
-            <h3>{pokemon?.abilities[0].ability.name}</h3>
+          <ul className="infoPoke__characteristics">
+            <li className="infoPoke__weight">Peso</li>
+            <li className="infoPoke__height">Altura</li>
+            <li className="infoPoke__weight__value">{pokemon?.weight}</li>
+            <li className="infoPoke__height__value">{pokemon?.height}</li>
+          </ul>
+          <div className="infoPoke__powers">
+            <h3>Tipo</h3>
+            <h3>Habilidades</h3>
+
+            <ul className='pokecard__types'>
+              {
+                pokemon?.types.map(infoType => (
+                  <li className='pokecard__typename' key={infoType.type.url}>{infoType.type.name}</li>
+                ))
+              }
+            </ul>
+            <ul className='pokecard__types pokecard__skills'>
+              {
+                pokemon?.abilities.map(infoskill => (
+                  <li className='pokecard__typename' key={infoskill.ability.url}>{infoskill.ability.name}</li>
+                ))
+              }
+            </ul>
+
           </div>
-        </div>
-        <div>
-          <h2>Stats</h2>
-        </div>
+          <div className='infoPoke__stats'>
+            <h1 className='infoPoke__stats--title'>Stats</h1>
+            <div className='infoPoke__stats--box'>
+              {
+                pokemon?.stats.map(stat => (
+                  <div className='infoPoke__stats--item' key={stat.stat.name}>
+                    <div className='infoPoke__stats--num'>
+                      <h3>{stat.stat.name}</h3>
+                      <span>{stat.base_stat}/150</span>
+                    </div>
+                    <div className='infoPoke__stats--bar'><span className='infoPoke__stats--bar2' style={{ width: `${(stat.base_stat * 100) / 150}%` }}></span></div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+
+
+
+
+
+
         </div>
       </article>
+      <div className='infoPoke__container2'>
+        <h1 className='infoPoke__stats--title'>Movements</h1>
+          <div className='infoPoke__movements--box'>
+             {
+              pokemon?.moves.map(move => (
+                <span>{move.move.name}</span>
+              ))
+             }
+          </div>
+        </div>
     </div>
   )
 }
