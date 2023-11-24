@@ -78,15 +78,15 @@ transform: scale(1.03);
 
 /* Color de las cartas  */
 .grass-gradient{
-    background:linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);;
+    background:linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+    
 }
 .fire-gradient{
     background:linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
 
 }
 .water-gradient{
-    background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
-
+    background: linear-gradient(90deg, rgb(92, 88, 171) 0%, rgb(87, 197, 219) 37%, rgb(144, 144, 181) 100%);
 }
 .bug-gradient{
     background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
@@ -101,7 +101,7 @@ transform: scale(1.03);
 
 }
 .flying-gradient{
-background: #ccc4;
+background: rgba(156,156,156,255);
 }
 .poison-gradient{
     background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
@@ -167,20 +167,20 @@ background:rgba(186,128,182,255);
     border-color: rgba(230,126,38,255);
 }
 .water-border{
-    border-color:rgba(87,160,253,255)
+    border-color:rgba(87,160,253,255);
 }
 .bug-border{
-    border-color:rgba(140,204,122,255)
+    border-color:rgba(140,204,122,255);
 }
 .normal-border{
-    border-color:rgba(154,98,110,255)
+    border-color:rgba(154,98,110,255);
 }
 .fighting-border{
-    border-color:rgba(193,78,48,255)
+    border-color:rgba(193,78,48,255);
 
 }
 .flying-border{
-    border-color:#ccc4
+    border-color:rgba(108, 107, 107, 0.267)
 
 }
 .poison-border{
@@ -257,7 +257,7 @@ background:rgba(186,128,182,255);
 
 }
 .flying-color{
-    color:#ccc4
+    color:rgba(108, 107, 107, 0.267)
 
 }
 .poison-color{

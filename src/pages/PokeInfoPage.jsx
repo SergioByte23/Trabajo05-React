@@ -13,7 +13,14 @@ const PokeInfoPage = () => {
   useEffect(() => {
     getPokemons()
   }, [])
-  const firsType=pokemon?.types[0].type.name
+  const firsType=pokemon?.types[0].type.name 
+
+  {
+    pokemon?.types.map(infoType => (
+      <li  key={infoType.type.url}>{infoType.type.name}</li>
+    ))
+  }
+
   console.log(pokemon);
   return (
     <div className="infoPoke__boxx">
@@ -24,38 +31,38 @@ const PokeInfoPage = () => {
         </div>
         <div className="box-black"></div>
       </div>
-
-      <article className={`infoPoke__article ${firsType}-gradient`}>
+      
+      <article className='infoPoke__article' >
         <img className="infoPoke__img" src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
-
+        <div className={`colorcito ${firsType}-gradient`}></div>
         <div className="infoPoke__div__card">
-          <h3 className="infoPoke__id">#{pokemon?.id}</h3>
+          <h3 className="infoPoke__id ">#{pokemon?.id}</h3>
           <div className="infoPoke__namecanbios">
             <hr className="infoPoke__hr__name"></hr>
             <span className="infoPoke__name">{pokemon?.species.name}</span>
             <hr className="infoPoke__hr__name"></hr>
           </div>
           <ul className="infoPoke__characteristics">
-            <li className="infoPoke__weight">Peso</li>
-            <li className="infoPoke__height">Altura</li>
+            <li className="infoPoke__weight infoPoke-Text">Peso</li>
+            <li className="infoPoke__height infoPoke-Text">Altura</li>
             <li className="infoPoke__weight__value">{pokemon?.weight}</li>
             <li className="infoPoke__height__value">{pokemon?.height}</li>
           </ul>
           <div className="infoPoke__powers">
-            <h3>Tipo</h3>
-            <h3>Habilidades</h3>
+            <h3 className="infoPoke-Text">Tipo</h3>
+            <h3 className="infoPoke-Text">Habilidades</h3>
 
             <ul className='pokecard__types'>
               {
                 pokemon?.types.map(infoType => (
-                  <li className='pokecard__typename' key={infoType.type.url}>{infoType.type.name}</li>
+                  <li className={`pokecard__typename pokecard__typename--bg ${infoType.type.name}-gradient`} key={infoType.type.url}>{infoType.type.name}</li>
                 ))
               }
             </ul>
             <ul className='pokecard__types pokecard__skills'>
               {
                 pokemon?.abilities.map(infoskill => (
-                  <li className='pokecard__typename' key={infoskill.ability.url}>{infoskill.ability.name}</li>
+                  <li className='pokecard__typename pokecard__typeskill--bg ' key={infoskill.ability.url}>{infoskill.ability.name}</li>
                 ))
               }
             </ul>

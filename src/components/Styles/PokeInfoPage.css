@@ -18,22 +18,28 @@
     transform: translate(-50%);
     z-index: 1;
 } */
-.infoPoke__boxx{
-    background: rgba(248,248,248,255);
-    padding-bottom:50px ;
+.colorcito{
+    width: 100%;
+    height: 150px;
+    
 }
+.infoPoke__boxx {
+    background: rgba(248, 248, 248, 255);
+    padding-bottom: 50px;
+}
+
 .infoPoke__article {
     width: 90%;
     
-    /* height: 500px;     */  
-    margin-top: 150px;
     margin-left: 5%;
     margin-right: 5%;
-    padding-top: 100px;
+    padding-top: 150px;
+
 }
 
 .infoPoke__div__card {
     width: 100%;
+    padding-top: 20px;
     background: white;
 
 
@@ -45,15 +51,28 @@
 .infoPoke__img {
     position: absolute;
     width: 100%;
-    max-width: 200px;
-    top: 100px;
+    max-width: 300px;
+    top: 80px;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
+    transition: 0.8s;
+    
 }
-
+.infoPoke__img:hover {
+    scale: 1.05;
+    transition: 0.8s;
+}
 .infoPoke__id {
+    width: 70px;
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.153);
     text-align: center;
+    margin: 0 auto;    
+    font-weight: 600;
+    padding: 4px;
+    font-size: 1.5rem; 
+    
 }
 
 .infoPoke__namecanbios {
@@ -61,11 +80,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 9px;
 }
 
 .infoPoke__name {
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
@@ -75,6 +95,9 @@
     border: 1px solid rebeccapurple;
     margin: 5px;
 }
+.infoPoke-Text{
+    font-weight: 600;
+}
 
 .infoPoke__characteristics {
     width: 20%;
@@ -82,6 +105,26 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+}
+.pokecard__typename--bg:nth-child(2)::before{
+    content:'';
+    padding-right: 0;
+}
+
+.pokecard__typename--bg{
+    width: 100px;
+    color: white;  
+    text-align: center;
+    padding: 2px;
+}
+.pokecard__typeskill--bg{
+    width: 100px;    
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.153);
+} 
+.pokecard__typeskill--bg:nth-child(2)::before{
+    content:'';    
+    padding-right: 0;
 }
 
 .infoPoke__powers {
@@ -93,7 +136,7 @@
 
 
 /* ********** */
-.infoPoke__stats{
+.infoPoke__stats {
     margin-top: 30px;
     padding: 0 1rem;
     display: flex;
@@ -102,7 +145,7 @@
     flex-direction: column;
 }
 
-.infoPoke__stats--title{
+.infoPoke__stats--title {
     display: flex;
     gap: 1rem;
     width: 100%;
@@ -111,52 +154,53 @@
     font-size: 25px;
 }
 
-.infoPoke__stats--title::after{
+.infoPoke__stats--title::after {
     content: "";
     display: block;
     width: 900px;
     height: 0.8px;
     background-color: var(--color-grey);
 }
-.infoPoke__stats--box{
+
+.infoPoke__stats--box {
     display: flex;
     width: 100%;
-    gap:1rem;
+    gap: 1rem;
     flex-direction: column;
 }
 
-.infoPoke__stats--item{
+.infoPoke__stats--item {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
 }
 
-.infoPoke__stats--num
-{
+.infoPoke__stats--num {
     font-size: 13px;
-display: flex;
-align-items: center;
-justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.infoPoke__stats--num h3{
+.infoPoke__stats--num h3 {
     text-transform: uppercase;
 }
 
-.infoPoke__stats--bar{
+.infoPoke__stats--bar {
     width: 100%;
     height: 25px;
     background-color: var(--color-ligth);
 }
 
-.infoPoke__stats--bar2{
+.infoPoke__stats--bar2 {
     display: block;
     height: 25px;
     background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
 
 }
+
 /* ********** */
-.infoPoke__container2{
+.infoPoke__container2 {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -166,17 +210,17 @@ justify-content: space-between;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 30px;
-    
+
 }
 
-.infoPoke__movements--box{
+.infoPoke__movements--box {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
 
-.infoPoke__movements--box span{
+.infoPoke__movements--box span {
     background-color: #E5E5E5;
     padding: 0.5rem 1rem;
     border-radius: 20px;
