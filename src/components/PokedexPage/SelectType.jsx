@@ -3,7 +3,7 @@ import useFetch from "../../hooks/userFetch"
 import '../Styles/PokedexPage.css'
 
 
-const SelectType = ({setSelectValue}) => {
+const SelectType = ({setSelectValue, setPage}) => {
     const url = 'https://pokeapi.co/api/v2/type'
 
     const [infoTypes,getInfoTypes]= useFetch(url)
@@ -15,6 +15,7 @@ const SelectType = ({setSelectValue}) => {
     
     const handleChange =()=>{
         setSelectValue(selectElement.current.value)
+        setPage(1)
     }
   return (
     <select className="option__allPokemon" ref={selectElement} onChange={handleChange}>

@@ -68,7 +68,7 @@ background: rgba(220,26,26,255);
     top: 140px;
     margin-left:70vw;
 } */
-.prueba{
+.box__Search__pokedexPage{
     display: flex;
 }
 .option__allPokemon{
@@ -108,3 +108,25 @@ background: rgba(220,26,26,255);
     }
 }
 
+.paginacion{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+    
+}
+.paginacion__block{
+    width: 50px;
+    height: 40px;
+    color: rgba(34,84,196,255);
+    background: rgba(236,241,255,255);
+    
+    padding: 8px 2px;
+    border-radius: 8px;
+}
+.paginacion__block--selected{
+    background: rgba(34,84,196,255);
+    color:white ;
+}
