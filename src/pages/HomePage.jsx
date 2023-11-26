@@ -4,41 +4,38 @@ import { setTrainerName } from '../store/slices/trainerName.slice'
 import { useNavigate } from 'react-router-dom'
 import '../components/Styles/HomePage.css'
 const HomePage = () => {
-    const inputName =useRef()
-    const dispatch=useDispatch()
-    const navigate =useNavigate()
+  const inputName = useRef()
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
-    const handleSubmit =e=>{
-        e.preventDefault()
-        dispatch(setTrainerName(inputName.current.value.trim()))
-        navigate('/pokedex')
-    }
+  const handleSubmit = e => {
+    e.preventDefault()
+    dispatch(setTrainerName(inputName.current.value.trim()))
+    navigate('/pokedex')
+  }
 
 
 
   return (
     <>
-    
-    <div className='pokedex'>
-        <img className='title__pokedex' src="/banner.png" alt="" />
-        <h2 className='subtitle__pokedex'>¡Hi Trainer!</h2>
-        <p className='paragraph'>To start,please give me your trainer name</p>
-        <form onSubmit={handleSubmit}>
+      <div className='box__HomePage__holi'>
+        <div className='pokedex'>
+          <img className='title__pokedex' src="/banner.png" alt="" />
+          <h2 className='subtitle__pokedex'>¡Hi Trainer!</h2>
+          <p className='paragraph'>To start,please give me your trainer name</p>
+          <form onSubmit={handleSubmit}>
             <input className='input__pokedex' placeholder="Your name..." ref={inputName} type="text" />
             <button className='button__pokedex'>Start</button>
-        </form>
-        
-    </div>
-    <div className="box-banner__poke">
-      <div className="box-red__poke"></div>
-      <div className="cuadrado__poke">
-          <div className="cuadradito__poke"></div>
+          </form>
+        </div>
+        <div className="box-banner__poke box-banner__HomePage">
+          <div className="box-red__poke"></div>
+          <div className="cuadrado__poke">
+            <div className="cuadradito__poke"></div>
+          </div>
+          <div className="box-black__poke"></div>
+        </div>
       </div>
-    <div className="box-black__poke"></div>
-    </div>
-    {/* <div className='contenedor'> */}
-    {/* <img className='img__footer' src="/public/Footer2.png" alt="" /> */}
-    {/* </div>  */}
     </>
   )
 }

@@ -23,6 +23,12 @@ transform: scale(1.03);
     transform: translate(-50%);
     top: 1.5em;
     /* funciona el translate el 50% del 50% */
+    transition: 0.5s;
+}
+.pokecard__image:hover{
+    scale: 1.15;
+    
+    transition: 0.5s;
 }
 .pokecard__body{
     padding: 3.5em 1em 2em;

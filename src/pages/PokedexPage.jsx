@@ -7,7 +7,7 @@ import SelectType from "../components/PokedexPage/SelectType"
 
 
 const PokedexPage = () => {
-    const trainerName = useSelector(store => store.trainerName)
+  const trainerName = useSelector(store => store.trainerName)
   const [inputValue, setInputValue] = useState('')
   const [selectValue, setSelectValue] = useState('allPokemons')
 
@@ -44,20 +44,20 @@ const PokedexPage = () => {
   // Logica paginación
   const [page, setPage] = useState(1)
   const pokemonsFiltered = pokemons?.results.filter(cbFilter)
- 
+
   const totalPokemon = pokemonsFiltered?.length
   const pokePerPage = 12
   const quantityPages = Math.ceil(totalPokemon / pokePerPage)
   let arrPages = []
-  for(let i = 1; i<= quantityPages; i++){
-    if(pokemonsFiltered) {
+  for (let i = 1; i <= quantityPages; i++) {
+    if (pokemonsFiltered) {
       arrPages.push(i)
     }
-  }
+  } 
   const firstIndex = pokePerPage * (page - 1)
   const finalIndex = pokePerPage * page
- //Final de la paginacion 
- 
+  //Final de la paginacion 
+
 
   return (
     <div>
@@ -82,7 +82,7 @@ const PokedexPage = () => {
           />
         </div>
       </div>
-      
+
       <div className="div__box__cards">
         {
           pokemonsFiltered?.slice(firstIndex, finalIndex).map(poke => (
@@ -96,22 +96,23 @@ const PokedexPage = () => {
       {
         /*Paginación*/
       }
-      
+
       <ul className="paginacion">
-        <li style={{display: `${ page <= 1 ? "none" : "block" }`}} className="paginacion__block" onClick={() =>{
-          if(page>=2){
-          setPage(page-1)
-          }}} >&lt;</li>
-        {
+        <li style={{ display: `${page <= 1 ? "none" : "block"}` }} className="paginacion__block" onClick={() => {
+          if (page >= 2) {
+            setPage(page - 1)
+          }
+        }} >&lt;</li>
+        {          
           arrPages.map(e => (
             <li className={`paginacion__block ${e === page ? "paginacion__block--selected" : ""}`} onClick={() => setPage(e)} key={e}>{e}</li>
           ))
         }
-        <li style={{display: `${ page>=quantityPages ? "none" : "block" }`}} className="paginacion__block" onClick={() =>{
-          if(page<quantityPages){
-            setPage(page+1)
+        <li style={{ display: `${page >= quantityPages ? "none" : "block"}` }} className="paginacion__block" onClick={() => {
+          if (page < quantityPages) {
+            setPage(page + 1)
           }
-           }}>&gt;</li>
+        }}>&gt;</li>
       </ul>
       {
         /*término Paginación*/
