@@ -61,8 +61,9 @@ const PokedexPage = () => {
 
   return (
     <div>
-      <div className="box-banner">
+      <div className="box-banner box-banner-Page">
         <div className="box-red"></div>
+        <img className='title__pokedex title__pokedex--Page' src="/banner.png" alt="" />
         <div className="cuadrado">
           <div className="cuadradito"></div>
         </div>

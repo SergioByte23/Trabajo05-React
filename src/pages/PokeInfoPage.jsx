@@ -26,6 +26,7 @@ const PokeInfoPage = () => {
     <div className="infoPoke__boxx">
       <div className="box-banner">
         <div className="box-red"></div>
+        <img className='title__pokedex title__pokedex--Page' src="/banner.png" alt="" />
         <div className="cuadrado">
           <div className="cuadradito"></div>
         </div>
@@ -43,14 +44,14 @@ const PokeInfoPage = () => {
             <hr className="infoPoke__hr__name"></hr>
           </div>
           <ul className="infoPoke__characteristics">
-            <li className="infoPoke__weight infoPoke-Text">Peso</li>
-            <li className="infoPoke__height infoPoke-Text">Altura</li>
+            <li className="infoPoke__weight infoPoke-Text">Weight</li>
+            <li className="infoPoke__height infoPoke-Text">Height</li>
             <li className="infoPoke__weight__value">{pokemon?.weight}</li>
             <li className="infoPoke__height__value">{pokemon?.height}</li>
           </ul>
           <div className="infoPoke__powers">
-            <h3 className="infoPoke-Text">Tipo</h3>
-            <h3 className="infoPoke-Text">Habilidades</h3>
+            <h3 className="infoPoke-Text">Type</h3>
+            <h3 className="infoPoke-Text">Habilities</h3>
 
             <ul className='pokecard__types'>
               {
